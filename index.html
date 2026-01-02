@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Student Tracker – Dashboard</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="app-title">
+        <h1>Student Tracker</h1>
+        <span id="todayDate" class="today-date"></span>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="planner.html">Plan Tasks</a>
+        <a href="tasks.html">View Tasks</a>
+    </nav>
+</header>
+
+
+
+<!-- MAIN DASHBOARD -->
+<main class="container">
+
+    <!-- OVERVIEW CARDS -->
+    <section class="overview">
+        <div class="card pastel-purple">
+            <span class="material-icons">menu_book</span>
+            <div>
+                <p class="label">Today Tasks</p>
+                <p class="value" id="totalTasks">0</p>
+            </div>
+        </div>
+
+        <div class="card pastel-blue">
+            <span class="material-icons">check_circle</span>
+            <div>
+                <p class="label">Completed</p>
+                <p class="value" id="completedTasks">0</p>
+            </div>
+        </div>
+
+        <div class="card pastel-peach">
+            <span class="material-icons">schedule</span>
+            <div>
+                <p class="label">Pending</p>
+                <p class="value" id="pendingTasks">0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TASK PROGRESS -->
+    <section class="section-card">
+        <h2>Task Completion</h2>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <p class="muted-text" id="progressText">0% Completed</p>
+    </section>
+
+    <!-- TODAY TASKS -->
+    <section class="section-card">
+        <h2>Today’s Tasks</h2>
+
+        <!-- Tasks injected by JS -->
+        <div id="todayTasks"></div>
+    </section>
+
+    <!-- SLEEP TRACKER -->
+    <section class="section-card">
+        <h2>Sleep Tracker (Last 7 Days)</h2>
+
+        <!-- Graph placeholder (logic next step) -->
+        <div class="sleep-graph">
+    <svg id="sleepLineGraph" viewBox="0 0 300 150"></svg>
+</div>
+        <!-- Sleep input -->
+        <div class="sleep-input">
+    <input type="time" id="sleepTime">
+    <button id="saveSleep">Save Sleep</button>
+</div>
+
+    </section>
+
+</main>
+
+<!-- JS -->
+<script src="dashboard.js"></script>
+
+</body>
+</html>

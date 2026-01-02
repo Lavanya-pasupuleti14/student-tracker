@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <h1>Student Tracker</h1>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a class="active" href="planner.html">Plan Tasks</a>
+        <a href="tasks.html">View Tasks</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="section-card planner-top">
+        <div class="planner-left">
+            <label>Select Date</label>
+            <input type="date" class="date-input">
+        </div>
+
+        <div class="planner-right">
+            <label>Add Task</label>
+            <input type="text" placeholder="Task title">
+            <textarea placeholder="Task notes"></textarea>
+            <button class="primary-btn">
+                <span class="material-icons">add</span> Add
+            </button>
+        </div>
+    </section>
+
+</main>
+
+
+<script src="planner.js"></script>
+</body>
+</html>
