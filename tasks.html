@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Tasks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <h1>Student Tracker</h1>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="planner.html">Plan Tasks</a>
+        <a class="active" href="tasks.html">View Tasks</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="section-card">
+    <h2>Filter Tasks</h2>
+    <div class="filter-row">
+        <input type="date" id="filterDate">
+        <select id="filterStatus">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+        </select>
+    </div>
+</section>
+
+
+    <section class="section-card">
+    <h2>All Tasks (Date-wise)</h2>
+
+    <table class="tasks-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Tasks</th>
+            </tr>
+        </thead>
+        <tbody id="tasksTableBody">
+            <!-- Rows injected by JS -->
+        </tbody>
+    </table>
+</section>
+
+<!-- Task Description Modal -->
+<div id="taskModal" class="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+
+
+</main>
+
+<script src="js/tasks.js"></script>
+</body>
+</html>
